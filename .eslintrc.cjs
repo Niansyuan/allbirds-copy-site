@@ -5,13 +5,21 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:vue/vue3-essential',
+    'plugin:vue/recommended',
     'airbnb-base',
-    'prettier',
+    'plugin:prettier-vue/recommended',
+    '@vue/prettier',
   ],
   rules: {
-    // override/add rules settings here, such as:
-    // 'vue/no-unused-vars': 'error'
+    'prettier-vue/prettier': [
+      'error',
+      {
+        printWidth: 100,
+        singleQuote: true,
+        semi: false,
+        trailingComma: 'es5',
+      },
+    ],
   },
   parserOptions: {
     ecmaVersion: 'latest',
@@ -25,4 +33,4 @@ module.exports = {
     },
     'import/core-modules': ['vite', '@vitejs/plugin-vue'],
   },
-};
+}
