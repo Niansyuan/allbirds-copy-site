@@ -10,10 +10,14 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write \"src/**/*.{js,vue,scss}\"",
     "check:style": "stylelint **/*.css",
-    "lint:style": "stylelint **/*.css --fix"
+    "lint:style": "stylelint **/*.css --fix",
+    "tailwind:build": "npx tailwindcss -i ./src/style.css -o ./dist/output.css --watch"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "stylelint-config-tailwindcss": "^0.0.7",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
@@ -25,10 +29,12 @@
     "eslint-plugin-prettier-vue": "^4.2.0",
     "eslint-plugin-vue": "^9.17.0",
     "prettier": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.3",
     "stylelint": "^15.10.2",
     "stylelint-config-recommended-vue": "^1.5.0",
     "stylelint-config-sass-guidelines": "^10.0.0",
     "stylelint-config-standard": "^34.0.0",
+    "tailwindcss": "^3.3.3",
     "vite": "^4.4.5"
   }
 }
