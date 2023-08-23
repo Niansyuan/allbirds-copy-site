@@ -1,12 +1,13 @@
 import './style.css'
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
+import Home from '@/components/Home.vue'
+import About from '@/components/About.vue'
 import App from './App.vue'
-import App2 from './App2.vue'
 
 const routes = [
-  { path: '/', name: 'Home', component: App },
-  { path: '/about', name: 'about', component: App2 },
+  { path: '/', name: 'Home', component: Home },
+  { path: '/About', name: 'About', component: About },
 ]
 
 const router = createRouter({
@@ -16,6 +17,6 @@ const router = createRouter({
 
 const app = createApp(App)
 
-// app.use(router)
+app.use(router)
 
 app.mount('#app')

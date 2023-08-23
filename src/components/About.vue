@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <p>this is home page</p>
+  <p>this is about page</p>
 </template>
 
 <style scoped></style>
