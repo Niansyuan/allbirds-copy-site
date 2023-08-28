@@ -1,6 +1,8 @@
+<!-- 練習查看用 -->
+
 <!-- 使用 VUE 3在 script 將所有生命週期log出來 -->
 <script setup>
-import { ref, onMounted, onUpdated, onUnmounted, onBeforeMount, onBeforeUpdate, onBeforeUnmount, onActivated, onDeactivated, onErrorCaptured, onRenderTracked, onRenderTriggered } from 'vue'
+import { onActivated, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onDeactivated, onErrorCaptured, onMounted, onRenderTracked, onRenderTriggered, onUnmounted, onUpdated, ref } from 'vue';
 const count = ref(0)
 
 onBeforeMount(() => {
