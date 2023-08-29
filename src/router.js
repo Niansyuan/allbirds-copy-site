@@ -4,8 +4,8 @@ import Home from '@/page/Home.vue'
 const routes = [{ path: '/', name: 'Home', component: Home }]
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes,
+    history: createWebHashHistory(),
+    routes,
 })
 
 export default router

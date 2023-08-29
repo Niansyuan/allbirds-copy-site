@@ -5,22 +5,16 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:vue/recommended',
+      'plugin:vue/vue3-recommended',
     'airbnb-base',
     'plugin:prettier-vue/recommended',
+      'plugin:tailwindcss/recommended',
     '@vue/prettier',
-  ],
-  rules: {
-    'prettier-vue/prettier': [
-      'error',
-      {
-        printWidth: 100,
-        singleQuote: true,
-        semi: false,
-        trailingComma: 'es5',
-      },
     ],
-  },
+    plugins: ['vue', 'prettier'],
+    rules: {
+        'prettier/prettier': 'error',
+    },
   parserOptions: {
     ecmaVersion: 'latest',
   },
