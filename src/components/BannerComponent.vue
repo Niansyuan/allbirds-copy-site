@@ -1,15 +1,24 @@
 <script setup>
 import ButtonComponent from '@/components/ButtonComponent.vue';
+
+const button = 'button bind' // 常數宣告，若要使用常數，就需要再下方使用bind :button="button"
 </script>
 
 <template>
     <div
-        className="flex flex-col justify-center items-center w-full h-full bg-orange-200 relative"
+        class="relative flex h-full w-full flex-col items-center justify-center bg-[url('/banner.jpg')] bg-cover bg-no-repeat"
     >
         <div>I am banner</div>
-        <div className="flex w-40 h-20 bg-orange-400 absolute bottom-10">
-            <!-- TODO: button切版 -->
-            <ButtonComponent />
+        <div class="absolute bottom-10 flex gap-4">
+            <div class="flex h-10 w-20">
+                <ButtonComponent
+                    :button-text="button"
+                    button-color="stone-600"
+                />
+            </div>
+            <div class="flex h-10 w-20">
+                <ButtonComponent button-text="button" />
+            </div>
         </div>
     </div>
 </template>
