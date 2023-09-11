@@ -11,13 +11,13 @@ const button = 'button bind' // 常數宣告，若要使用常數，就需要再
         <div>I am banner</div>
         <div class="absolute bottom-10 flex gap-4">
             <div class="flex h-10 w-20">
-                <ButtonComponent
-                    :button-text="button"
-                    button-color="stone-600"
-                />
+                <ButtonComponent :button-text="button" button-color="primary" />
             </div>
             <div class="flex h-10 w-20">
-                <ButtonComponent button-text="button" />
+                <ButtonComponent
+                    button-text="button"
+                    button-color="secondary"
+                />
             </div>
         </div>
     </div>
