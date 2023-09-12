@@ -8,7 +8,7 @@ const button = 'button bind' // 常數宣告，若要使用常數，就需要再
     <div
         class="relative flex h-full w-full flex-col items-center justify-center bg-[url('/banner.jpg')] bg-cover bg-no-repeat"
     >
-        <div>I am banner</div>
+        <div class="text-2xl font-bold text-white">I AM BANNER</div>
         <div class="absolute bottom-10 flex gap-4">
             <div class="flex h-10 w-40">
                 <ButtonComponent

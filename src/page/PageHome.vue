@@ -1,6 +1,7 @@
 <script setup>
 import NavBar from '@/components/NavBar.vue';
 import BannerComponent from '../components/BannerComponent.vue';
+import CataLogueComponent from '../components/CataLogueComponent.vue';
 </script>
 
 <template>
@@ -9,6 +10,9 @@ import BannerComponent from '../components/BannerComponent.vue';
     </div>
     <div class="h-96 w-full">
         <BannerComponent />
+    </div>
+    <div class="h-max w-full">
+        <CataLogueComponent />
     </div>
     <router-link to="/">Go to Home</router-link>
 </template>
