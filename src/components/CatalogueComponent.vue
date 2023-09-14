@@ -15,9 +15,9 @@ import BasicTab from '@/components/BasicTab.vue';
                 </div>
             </div>
             <div class="flex items-center justify-between gap-4">
-                <BasicCard></BasicCard>
-                <BasicCard></BasicCard>
-                <BasicCard></BasicCard>
+                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
+                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
+                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
             </div>
         </div>
     </div>
