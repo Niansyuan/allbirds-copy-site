@@ -1,7 +1,7 @@
 <script setup>
 import ButtonComponent from '@/components/ButtonComponent.vue';
 
-const props = defineProps(['cardImg'])
+const props = defineProps(['cardImg']);
 </script>
 
 <template>
