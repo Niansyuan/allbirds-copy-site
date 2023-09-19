@@ -1,7 +1,7 @@
 <script setup>
 import ButtonComponent from '@/components/ButtonComponent.vue';
 
-const button = 'button bind' // 常數宣告，若要使用常數，就需要再下方使用bind :button="button"
+const button = 'button bind'; // 常數宣告，若要使用常數，就需要再下方使用bind :button="button"
 </script>
 
 <template>

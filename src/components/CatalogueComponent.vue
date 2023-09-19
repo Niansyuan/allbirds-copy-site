@@ -5,7 +5,7 @@ import BasicTab from '@/components/BasicTab.vue';
 
 <template>
     <div class="flex flex-col items-center py-10">
-        <div class="py-4">Our Favorites</div>
+        <div class="py-4 text-2xl font-bold">Our Favorites</div>
         <div class="bg-slate-100">
             <div class="mb-2 flex items-center justify-center border-b-2">
                 <div class="flex items-center justify-center">
