@@ -5,7 +5,7 @@ const props = defineProps(['cardImg']);
 </script>
 
 <template>
-    <div class="flex h-80 w-64 flex-col bg-slate-50">
+    <div class="flex h-80 w-64 shrink-0 flex-col bg-slate-50">
         <div
             :class="`flex bg-[${props.cardImg}] flex-1 flex-col items-center justify-center gap-2`"
         >
