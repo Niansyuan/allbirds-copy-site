@@ -1,44 +1,80 @@
 <script setup>
 import BasicCard from '@/components/BasicCard.vue';
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
+
+const refCarousel = ref(null);
+const handleClickLeft = () => {
+    refCarousel.value.scrollTo({
+        left: refCarousel.value.scrollLeft - 260,
+        behavior: 'smooth',
+    });
+};
+
+const handleClickRight = () => {
+    refCarousel.value.scrollTo({
+        left: refCarousel.value.scrollLeft + 260,
+        behavior: 'smooth',
+    });
+};
+
+let isDown = false;
+let startX;
+let scrollLeftValue;
+const dragStart = e => {
+    isDown = true;
+    refCarousel.value.classList.add('active');
+    startX = e.pageX;
+    scrollLeftValue = refCarousel.value.scrollLeft;
+};
+
+const dragging = e => {
+    if (!isDown) return;
+    refCarousel.value.scrollTo({
+        left: (e.pageX, scrollLeftValue - (e.pageX - startX)),
+    });
+};
+
+const dragEnd = () => {
+    isDown = false;
+    refCarousel.value.classList.remove('active');
+};
 
 onMounted(() => {
-    // FIXME: This is a temporary fix for the scroll issue
-    const scrollContainer = document.querySelector('#carousel');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    refCarousel.value.addEventListener('mousedown', dragStart);
+    refCarousel.value.addEventListener('mousemove', dragging);
+    refCarousel.value.addEventListener('mouseup', dragEnd);
+});
 
-    scrollContainer.addEventListener('mousedown', e => {
-        isDown = true;
-        scrollContainer.classList.add('active');
-        startX = e.pageX;
-        scrollLeft = scrollContainer.scrollLeft;
-        console.log(e.pageX, scrollLeft, scrollContainer);
-    });
-
-    scrollContainer.addEventListener('mousemove', e => {
-        if (!isDown) return;
-        scrollContainer.scrollLeft = scrollLeft - (e.pageX - startX);
-        console.log(
-            scrollLeft,
-            scrollLeft - (e.pageX - startX),
-            scrollContainer.scrollLeft,
-        );
-    });
-
-    scrollContainer.addEventListener('mouseup', () => {
-        isDown = false;
-        scrollContainer.classList.remove('active');
-    });
+onUnmounted(() => {
+    refCarousel.value.removeEventListener('mousedown', dragStart);
+    refCarousel.value.removeEventListener('mousemove', dragging);
+    refCarousel.value.removeEventListener('mouseup', dragEnd);
 });
 </script>
 
 <template>
-    <div class="flex w-full flex-col items-center py-10">
+    <div class="relative flex w-full flex-col items-center py-10">
         <div class="py-4 text-2xl font-bold">Our Favorites</div>
-        <div class="flex w-full overflow-auto bg-slate-100 sm:w-2/3">
-            <div id="carousel" class="flex w-full gap-4">
+
+        <div class="relative flex w-full bg-slate-100 sm:w-2/3 sm:items-center">
+            <div
+                class="absolute left-0 top-1/2 flex h-12 w-12 -translate-x-1/2 cursor-pointer items-center justify-center rounded-3xl border-2 border-slate-100 bg-white shadow-lg max-sm:hidden"
+                @click="handleClickLeft"
+            >
+                L
+            </div>
+            <div
+                class="absolute right-0 top-1/2 flex h-12 w-12 translate-x-1/2 cursor-pointer items-center justify-center rounded-3xl border-2 border-slate-100 bg-white shadow-lg max-sm:hidden"
+                @click="handleClickRight"
+            >
+                R
+            </div>
+            <div
+                ref="refCarousel"
+                class="flex w-full gap-4 overflow-x-scroll whitespace-nowrap"
+            >
+                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
+                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
                 <BasicCard card-img="url('/banner.jpg')"></BasicCard>
                 <BasicCard card-img="url('/banner.jpg')"></BasicCard>
                 <BasicCard card-img="url('/banner.jpg')"></BasicCard>
