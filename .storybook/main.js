@@ -1,15 +1,17 @@
 import { mergeConfig } from 'vite';
 
 export default {
+    framework: {
+        name: '@storybook/vue3-vite',
+        options: {}
+    },
     stories: ['../src/**/*.mdx', '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
     addons: [
+        'storybook-dark-mode',
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-interactions'
     ],
-    core: {
-        builder: '@storybook/builder-vite',
-    },
     async viteFinal(config) {
         // Merge custom configuration into the default config
         return mergeConfig(config, {
@@ -19,4 +21,7 @@ export default {
             },
         });
     },
+    docs: {
+        autodocs: true
+    }
 };
