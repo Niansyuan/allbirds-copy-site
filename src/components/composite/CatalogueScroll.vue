@@ -1,5 +1,5 @@
 <script setup>
-import BasicCard from '@/components/BasicCard.vue';
+import Card from '@/components/composite/Card.vue';
 import { onMounted, onUnmounted, ref } from 'vue';
 
 const refCarousel = ref(null);
@@ -73,13 +73,13 @@ onUnmounted(() => {
                 ref="refCarousel"
                 class="flex w-full gap-4 overflow-x-scroll whitespace-nowrap"
             >
-                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
-                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
-                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
-                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
-                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
-                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
-                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
+                <Card card-img="url('/banner.jpg')"></Card>
+                <Card card-img="url('/banner.jpg')"></Card>
+                <Card card-img="url('/banner.jpg')"></Card>
+                <Card card-img="url('/banner.jpg')"></Card>
+                <Card card-img="url('/banner.jpg')"></Card>
+                <Card card-img="url('/banner.jpg')"></Card>
+                <Card card-img="url('/banner.jpg')"></Card>
             </div>
         </div>
     </div>

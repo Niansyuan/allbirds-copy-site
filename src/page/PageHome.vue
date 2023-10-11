@@ -1,8 +1,8 @@
 <script setup>
-import NavBar from '@/components/NavBar.vue';
-import BannerComponent from '../components/BannerComponent.vue';
-import CatalogueComponent from '../components/CatalogueComponent.vue';
-import CatalogueScrollComponent from '../components/CatalogueScrollComponent.vue';
+import Banner from '@/components/composite/Banner.vue';
+import Catalogue from '@/components/composite/Catalogue.vue';
+import CatalogueScroll from '@/components/composite/CatalogueScroll.vue';
+import NavBar from '@/components/composite/NavBar.vue';
 </script>
 
 <template>
@@ -10,13 +10,13 @@ import CatalogueScrollComponent from '../components/CatalogueScrollComponent.vue
         <NavBar />
     </div>
     <div class="h-96 w-full">
-        <BannerComponent />
+        <Banner />
     </div>
     <div class="h-max w-full">
-        <CatalogueComponent />
+        <Catalogue />
     </div>
     <div class="h-max w-full">
-        <CatalogueScrollComponent />
+        <CatalogueScroll />
     </div>
     <router-link to="/">Go to Home</router-link>
 </template>

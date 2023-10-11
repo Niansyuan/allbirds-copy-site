@@ -1,5 +1,5 @@
 <script setup>
-import ButtonComponent from '@/components/ButtonComponent.vue';
+import BasicButton from '@/components/view/BasicButton.vue';
 
 const props = defineProps(['cardImg']);
 </script>
@@ -10,14 +10,14 @@ const props = defineProps(['cardImg']);
             :class="`flex bg-[${props.cardImg}] flex-1 flex-col items-center justify-center gap-2`"
         >
             <div class="h-8 w-2/3">
-                <ButtonComponent
+                <BasicButton
                     button-text="BUTTON A"
                     button-color="primary"
                     button-border="primary"
                 />
             </div>
             <div class="h-8 w-2/3">
-                <ButtonComponent
+                <BasicButton
                     button-text="BUTTON B"
                     button-color="primary"
                     button-border="primary"

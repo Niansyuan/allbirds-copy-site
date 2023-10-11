@@ -1,5 +1,5 @@
 <script setup>
-import ButtonComponent from '@/components/ButtonComponent.vue';
+import BasicButton from '@/components/view/BasicButton.vue';
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import ButtonComponent from '@/components/ButtonComponent.vue';
         <div
             class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
         >
-            <ButtonComponent
+            <BasicButton
                 button-text="I AM LOGO"
                 button-color="transparent"
                 button-border="icon"
@@ -17,17 +17,17 @@ import ButtonComponent from '@/components/ButtonComponent.vue';
         <div
             class="absolute right-0 flex h-full flex-row items-center space-x-4 pr-8"
         >
-            <ButtonComponent
+            <BasicButton
                 button-text="search"
                 button-color="transparent"
                 button-border="none"
             />
-            <ButtonComponent
+            <BasicButton
                 button-text="account"
                 button-color="transparent"
                 button-border="none"
             />
-            <ButtonComponent
+            <BasicButton
                 button-text="shopping car"
                 button-color="transparent"
                 button-border="none"

@@ -1,6 +1,6 @@
 <script setup>
-import BasicCard from '@/components/BasicCard.vue';
-import BasicTab from '@/components/BasicTab.vue';
+import Card from '@/components/composite/Card.vue';
+import BasicTab from '@/components/view/BasicTab.vue';
 </script>
 
 <template>
@@ -21,9 +21,9 @@ import BasicTab from '@/components/BasicTab.vue';
             <div
                 class="flex items-center gap-4 overflow-x-auto sm:justify-center"
             >
-                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
-                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
-                <BasicCard card-img="url('/banner.jpg')"></BasicCard>
+                <Card card-img="url('/banner.jpg')"></Card>
+                <Card card-img="url('/banner.jpg')"></Card>
+                <Card card-img="url('/banner.jpg')"></Card>
             </div>
         </div>
     </div>
