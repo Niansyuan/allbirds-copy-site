@@ -7,6 +7,7 @@ export default {
 
 export const Primary = {
     render: () => ({
+        components: { BasicButton },
         template:
             '<div class="flex h-10 w-40"><BasicButton button-text="button" button-color="secondary" button-border="primary"/></div>',
     }),
