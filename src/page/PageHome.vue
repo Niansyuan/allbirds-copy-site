@@ -1,22 +1,22 @@
 <script setup>
-import Banner from '@/components/composite/Banner.vue';
-import Catalogue from '@/components/composite/Catalogue.vue';
-import CatalogueScroll from '@/components/composite/CatalogueScroll.vue';
-import NavBar from '@/components/composite/NavBar.vue';
+import LayoutBanner from '@/components/composite/LayoutBanner.vue';
+import LayoutCatalogue from '@/components/composite/LayoutCatalogue.vue';
+import LayoutCatalogueScroll from '@/components/composite/LayoutCatalogueScroll.vue';
+import LayoutNavBar from '@/components/composite/LayoutNavBar.vue';
 </script>
 
 <template>
     <div class="h-10 w-full">
-        <NavBar />
+        <LayoutNavBar />
     </div>
     <div class="h-96 w-full">
-        <Banner />
+        <LayoutBanner />
     </div>
     <div class="h-max w-full">
-        <Catalogue />
+        <LayoutCatalogue />
     </div>
     <div class="h-max w-full">
-        <CatalogueScroll />
+        <LayoutCatalogueScroll />
     </div>
     <router-link to="/">Go to Home</router-link>
 </template>

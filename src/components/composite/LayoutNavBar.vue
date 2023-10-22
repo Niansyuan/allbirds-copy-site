@@ -15,7 +15,7 @@ import BasicButton from '@/components/view/BasicButton.vue';
             />
         </div>
         <div
-            class="absolute right-0 flex h-full flex-row items-center space-x-4 pr-8"
+            class="absolute right-0 flex h-full flex-row items-center space-x-4 pr-8 max-md:hidden"
         >
             <BasicButton
                 button-text="search"

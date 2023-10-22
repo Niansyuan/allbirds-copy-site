@@ -1,7 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 
-import Card from '@/components/composite/Card.vue';
+import LayoutCard from '@/components/composite/LayoutCard.vue';
 
 const refCarousel = ref(null);
 const handleClickLeft = () => {
@@ -74,13 +74,13 @@ onBeforeUnmount(() => {
                 ref="refCarousel"
                 class="flex w-full gap-4 overflow-x-scroll whitespace-nowrap"
             >
-                <Card card-img="url('/banner.jpg')"></Card>
-                <Card card-img="url('/banner.jpg')"></Card>
-                <Card card-img="url('/banner.jpg')"></Card>
-                <Card card-img="url('/banner.jpg')"></Card>
-                <Card card-img="url('/banner.jpg')"></Card>
-                <Card card-img="url('/banner.jpg')"></Card>
-                <Card card-img="url('/banner.jpg')"></Card>
+                <LayoutCard card-img="url('/banner.jpg')"></LayoutCard>
+                <LayoutCard card-img="url('/banner.jpg')"></LayoutCard>
+                <LayoutCard card-img="url('/banner.jpg')"></LayoutCard>
+                <LayoutCard card-img="url('/banner.jpg')"></LayoutCard>
+                <LayoutCard card-img="url('/banner.jpg')"></LayoutCard>
+                <LayoutCard card-img="url('/banner.jpg')"></LayoutCard>
+                <LayoutCard card-img="url('/banner.jpg')"></LayoutCard>
             </div>
         </div>
     </div>
