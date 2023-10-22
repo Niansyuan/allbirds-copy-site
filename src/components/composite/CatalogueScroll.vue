@@ -1,6 +1,7 @@
 <script setup>
+import { onBeforeUnmount, onMounted, ref } from 'vue';
+
 import Card from '@/components/composite/Card.vue';
-import { onMounted, onUnmounted, ref } from 'vue';
 
 const refCarousel = ref(null);
 const handleClickLeft = () => {
@@ -45,7 +46,7 @@ onMounted(() => {
     refCarousel.value.addEventListener('mouseup', dragEnd);
 });
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
     refCarousel.value.removeEventListener('mousedown', dragStart);
     refCarousel.value.removeEventListener('mousemove', dragging);
     refCarousel.value.removeEventListener('mouseup', dragEnd);

@@ -4,7 +4,10 @@ const props = defineProps([
     'buttonColor',
     'buttonBorder',
     'buttonFont',
+    'buttonAction',
 ]);
+
+const handleOnClick = props.buttonAction;
 
 // https://tailwindcss.com/docs/content-configuration#dynamic-class-names
 const colorVariants = {
@@ -30,6 +33,7 @@ const textVariants = {
 <template>
     <div
         :class="`flex h-full w-full cursor-pointer flex-col items-center justify-center whitespace-nowrap ${borderRadiusVariants} ${colorVariants} ${textVariants}`"
+        @click="handleOnClick"
     >
         {{ props.buttonText }}
     </div>

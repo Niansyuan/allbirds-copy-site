@@ -1,7 +1,14 @@
 <script setup>
+import { useRouter } from 'vue-router';
+
 import BasicButton from '@/components/view/BasicButton.vue';
 
 const button = 'button bind'; // 常數宣告，若要使用常數，就需要再下方使用bind :button="button"
+const router = useRouter();
+
+const clickBannerLink = path => {
+    router.push(path);
+};
 </script>
 
 <template>
@@ -15,6 +22,7 @@ const button = 'button bind'; // 常數宣告，若要使用常數，就需要�
                     :button-text="button"
                     button-color="primary"
                     button-border="primary"
+                    :button-action="() => clickBannerLink('/Test')"
                 />
             </div>
             <div class="flex h-10 w-40">
