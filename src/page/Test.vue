@@ -2,8 +2,9 @@
 
 <!-- 使用 VUE 3在 script 將所有生命週期log出來 -->
 <script setup>
-import TestButton from '@/components/TestButton.vue';
 import { ref } from 'vue';
+
+import TestButton from '@/components/TestButton.vue';
 
 const isCountShow = ref(true);
 
