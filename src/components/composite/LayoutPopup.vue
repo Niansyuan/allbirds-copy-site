@@ -3,13 +3,14 @@ import { computed, defineProps } from 'vue';
 
 import BasicButton from '@/components/view/BasicButton.vue';
 
-const props = defineProps(['isShow']);
+const props = defineProps(['isShow', 'closePopup']);
 
 const displayPopup = computed(() => {
     console.log(props.isShow);
     return props.isShow;
 });
 </script>
+
 <template>
     <div
         v-if="displayPopup"
@@ -22,6 +23,7 @@ const displayPopup = computed(() => {
                 button-text="Close"
                 button-color="secondary"
                 button-border="primary"
+                :button-action="props.closePopup"
             />
         </div>
     </div>

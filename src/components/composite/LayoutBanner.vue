@@ -36,6 +36,7 @@ const clickBannerPopup = () => {
         <div class="relative h-max w-full">
             <LayoutPopup
                 :is-show="isShowPopupBanner"
+                :close-popup="clickBannerPopup"
                 @update:is-show="togglePopup"
             />
         </div>

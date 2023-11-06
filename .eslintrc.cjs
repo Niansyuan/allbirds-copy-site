@@ -24,6 +24,7 @@ module.exports = {
                 'newlines-between': 'always',
             },
         ],
+        'no-param-reassign': ['error', { props: false }],
     },
     parserOptions: {
         ecmaVersion: 'latest',
